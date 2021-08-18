@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 import "../sass/components/_todoadd.sass"
 
 function TodoAdd({value, setTitle, addNewPost}) {

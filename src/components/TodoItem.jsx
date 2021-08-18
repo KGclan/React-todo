@@ -10,7 +10,7 @@ function TodoItem({todo, deleteTodo}) {
   return(
     <li className="todo-item">
       <input className="todo-item__checkbox" type="checkbox" />
-      <p className="todo-item__p">{todo.id} {todo.title}</p>
+      <p className="todo-item__p">{todo.title}</p>
       <button className="todo-item__button" onClick={remove}>&#10006;</button>
     </li>
   )

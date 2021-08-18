@@ -25,7 +25,7 @@ function TodoList() {
   }
 
   const deleteTodo = (id) =>{
-    console.log(id)
+    setTodos(todos.filter(todo => id !== todo.id))
   }
 
   return(
