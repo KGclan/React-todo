@@ -1,0 +1,20 @@
+@import "../utils/_variables"
+@import "../utils/_mixins"
+
+.todo-add
+  @include flexColumn()
+  align-items: center
+  gap: 5px
+  .todo-add__input
+  .todo-add__button
+    background: $todo-add-button
+    border: none
+    height: 25px
+    width: 100px
+    border-radius: 10px
+    color: $todo-add-button-text
+    transition: 1s
+    &:hover
+      background: $todo-add-button-active
+      transition: 1s
+      cursor: pointer
