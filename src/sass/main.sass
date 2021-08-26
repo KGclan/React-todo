@@ -1,21 +1,25 @@
 @import "./utils/_mixins"
 @import "./utils/_variables"
 @import "./base/_typography"
-
-.todo-list
-  font-family: 'STIX Two Text', serif
-  height: 50%
-  width: 35%
-  position: absolute
-  left: 32.5%
-  top: 25%
-  @include flexColumn()
-  align-items: center
-  background: $main
-  border-radius: 10%
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5)
-  .todo-list__ul
+body
+  background: $background
+  .todo-list
+    font-family: 'STIX Two Text', serif
+    min-height: 50%
+    width: 35%
+    position: absolute
+    left: 32.5%
+    top: 25%
     @include flexColumn()
-    gap: 5px
-    width: 100%
+    align-items: center
+    background: $main
+    border-radius: 40px
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5)
+    .todo-list__ul
+      @include flexColumn()
+      text-align: center
+      gap: 5px
+      width: 100%
+      .ul__clean
+        margin-right: 30px
   

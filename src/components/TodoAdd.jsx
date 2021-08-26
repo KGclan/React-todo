@@ -16,9 +16,9 @@ function TodoAdd({value, setTitle, addNewPost}) {
       value={value}
       onChange={e => setTitle(e.target.value)}
       />
-    <button className="todo-add__button" type="submit" onClick={addPost}>Добавить</button>
+    <button className="todo-add__button" type="submit" onClick={addPost}>Add todo</button>
   </form>
   )
 }
 
-export default TodoAdd;
+export default TodoAdd

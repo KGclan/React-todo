@@ -1,14 +1,10 @@
 import React from "react"
 
-function TodoCounter(props) {
-
-  function countTodos(){
-    return props.todos.length
-  }
+function TodoCounter({todos}) {
   
   return(
-    <h1 className="todo-counter">Всего задач: {countTodos()}</h1>
+    <h1 className="todo-counter">All todos: {todos}</h1>
   )
 }
 
-export default TodoCounter;
+export default TodoCounter
