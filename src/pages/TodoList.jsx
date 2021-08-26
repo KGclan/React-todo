@@ -13,7 +13,7 @@ function TodoList() {
   const [todos, setTodos] = useState([])
   const [title, setTitle] = useState(" ")
   const [totalPages, setTotalPages] = useState(0)
-  const [limit, setLimit] = useState(4)
+  const [limit] = useState(4)
   const [page, setPage] = useState(1)
   const [allTodos, setAllTodos] = useState(0)
 
@@ -23,10 +23,12 @@ function TodoList() {
     const totalCount = response.headers["x-total-count"]
     setTotalPages(getPageCount(totalCount, limit))
   }  
+
   async function fetchTodosCount() {
     const response = await axios.get("https://jsonplaceholder.typicode.com/todos")
     setAllTodos(response.data.length)
   }
+  
   useEffect(() => {
     fetchTodos()
   }, [page])
